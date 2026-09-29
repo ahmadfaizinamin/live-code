@@ -47,7 +47,6 @@ class ProductController extends Controller
     {
         try {
             $validasi = $request->validated();
-            $validasi['user_id'] = Auth::guard('api')->id();
             $data = $this->productService->createProduct($validasi);
 
             return response()->json([

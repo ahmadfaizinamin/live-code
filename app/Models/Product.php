@@ -13,8 +13,8 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function User()
+    public function Reviews()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Review::class);
     }
 }
